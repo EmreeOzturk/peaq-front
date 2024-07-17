@@ -38,6 +38,7 @@ const BeamInput = () => {
             <input
                 ref={inputRef}
                 type="email"
+                name="email"
                 placeholder="Enter your email"
                 className="w-full bg-transparent text-sm text-white placeholder-white/80 focus:outline-0"
             />

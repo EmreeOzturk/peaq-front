@@ -7,10 +7,13 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
+// import { testAction } from "@/action";
+// import { useFormState } from "react-dom";
+
 
 const BeamInput = () => {
     const inputRef = useRef<HTMLInputElement | null>(null);
-
+    // const [state, formAction] = useFormState(testAction, {});
     const turn = useMotionValue(0);
 
     useEffect(() => {
@@ -26,9 +29,7 @@ const BeamInput = () => {
 
     return (
         <form
-            onSubmit={(e) => {
-                e.preventDefault();
-            }}
+            // action={formAction}
             onClick={() => {
                 inputRef.current?.focus();
             }}

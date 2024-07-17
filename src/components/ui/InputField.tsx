@@ -15,7 +15,7 @@ const BeamInput = () => {
     const inputRef = useRef<HTMLInputElement | null>(null);
     const [state, formAction] = useFormState(testAction, {});
     const turn = useMotionValue(0);
-
+    console.log(state)
     useEffect(() => {
         animate(turn, 1, {
             ease: "linear",
@@ -53,6 +53,8 @@ const BeamInput = () => {
                 </span>
                 <FiArrowRight className="-mr-4 opacity-0 transition-all group-hover:-mr-0 group-hover:opacity-100 group-active:-rotate-45" />
             </button>
+
+            {state[0] && <>{state[0].title}</>}
 
             <div className="pointer-events-none absolute inset-0 z-10 rounded-full">
                 <motion.div
